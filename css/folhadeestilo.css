@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    background: #000000;
+    padding: 20px;
+}
+
+.container-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.container-menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+}
+
+.container-menu ul li{
+    padding: 20px;
+}
+
+.container-menu ul li a{
+    text-decoration: none;
+    color: rgb(177, 152, 40);
+}
+
+main{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #000000;
+    padding: 15px;
+}
+
+footer .texto-direitos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0em;
+    color: rgb(177, 152, 40);
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    header{
+        padding: 15px;
+    }
+
+    .container-menu ul{
+        font-size: 1.0em;
+    }
+
+    .container-menu ul li{
+        padding: 15px;
+    }
+
+    footer .texto-direitos{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8em;
+        color: rgb(177, 152, 40);
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 601px) {
+
+}
