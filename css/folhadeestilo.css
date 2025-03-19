@@ -38,6 +38,10 @@ header{
 
 .container-menu ul li a{
     text-decoration: none;
+    color: rgb(235, 201, 53);
+}
+
+.container-menu ul li a:hover{
     color: rgb(177, 152, 40);
 }
 
@@ -48,6 +52,40 @@ main{
     align-items: center;
 }
 
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.box{
+    display: flex;
+    background: #000000;
+    padding: 20px;
+    width: 30%;        
+    border-radius: 5px;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .banner{
+    /*background-image: url('../assets/IMG_6506.PNG');
+    background-size: cover;
+    background-position: center;*/
+    width: 100%;
+    height: 50vh;
+}
+
+.box .banner img{
+    width: 100%;
+    height: 50vh;
+}
+
 footer {
     background: #000000;
     padding: 15px;
@@ -56,7 +94,7 @@ footer {
 footer .texto-direitos{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.0em;
-    color: rgb(177, 152, 40);
+    color: rgb(235, 201, 53);
     text-align: center;
 }
 
@@ -75,6 +113,26 @@ footer .texto-direitos{
         padding: 15px;
     }
 
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+
+    .banner{
+        /*background-image: url('./assets/carropeq.jpg');*/
+        height: 50vh;
+        width: 50%;
+    }
+
+    .box .banner img{
+        width: 100%;
+        height: 50vh;
+    }
+
     footer .texto-direitos{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 0.8em;
@@ -85,5 +143,11 @@ footer .texto-direitos{
 
 
 @media (max-width: 1024px) and (min-width: 601px) {
+    .container {
+        flex-wrap: wrap;
+    }
 
+    .box {
+        width: 45%;
+    }
 }
