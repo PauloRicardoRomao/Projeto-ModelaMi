@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelaMi</title>
+    <link rel="stylesheet" type="text/css" href="./css/folhadeestilo.css">
+</head>
+<body>
+    <header>
+        <nav class="container-menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="">procedimentos</a></li>
+                <li><a href="">sobre</a></li>
+                <li><a href="#">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="box">
+                <form class="form-contato" id="form-contato">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Fulano" name="nome">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="exemplo@gmail.com" name="email">
+                    <label for="cel">Celular</label>
+                    <input type="tel" placeholder="14 99999-9999" name="cel">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea placeholder="Sua mensagem aqui" name="mensagem" id="mensagem"></textarea>
+                    <button type="submit" onclick="">Enviar</button>
+                </form>
+            </section>
+            <section class="box">
+                <div class="mural-contatos">
+                    <h1>Contatos</h1>
+                    <img src="./assets/instagram.png"
+                        srcset="./assets/instagram.png 480w, ./assets/instagram.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="Instagram"
+                    >
+                    <img src="./assets/facebook.png"
+                        srcset="./assets/facebook.png 480w, ./assets/facebook.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="Facebook"
+                    >
+                    <img src="./assets/whatsapp.png"
+                        srcset="./assets/whatsapp.png 480w, ./assets/whatsapp.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="WhatsApp"
+                    >
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="texto-direitos">© 2025 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
