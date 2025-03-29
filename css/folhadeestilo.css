@@ -56,6 +56,8 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
     gap: 20px;
     justify-content: center;
     max-width: 1200px;
@@ -84,6 +86,7 @@ main{
 .box .banner img{
     width: 100%;
     height: 50vh;
+    border-radius: 20px;
 }
 
 footer {
@@ -99,10 +102,91 @@ footer .texto-direitos{
 }
 
 
+/*contato*/
+
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    width: 100%;
+    height: auto;  
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.form-contato input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.form-contato textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    padding-left: 5px;
+    height: 8rem;
+}
+
+.form-contato button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 10px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 201, 53);
+    border: none;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.form-contato button:hover{
+    cursor: pointer;
+    background-color: rgb(177, 152, 40);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    color: #fff;
+}
+
+.mural-contatos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;  
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(235, 201, 53);
+}
+
+.mural-contatos h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+    color: #000000;
+}
+
+.mural-contatos img{
+    width: 30%;
+}
+
+.mural-contatos img:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+    border-radius: 50%;
+}
 
 @media (max-width: 600px) {
     header{
         padding: 15px;
+        margin-bottom: 5px;
     }
 
     .container-menu ul{
@@ -116,10 +200,11 @@ footer .texto-direitos{
     .container {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .box {
-        width: 80%;
+        width: 60%;
     }
 
     .banner{
@@ -131,6 +216,10 @@ footer .texto-direitos{
     .box .banner img{
         width: 100%;
         height: 50vh;
+    }
+
+    footer{
+        margin-top: 5px;
     }
 
     footer .texto-direitos{
