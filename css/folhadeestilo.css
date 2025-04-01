@@ -12,8 +12,10 @@ body{
 
 header{
     display: flex;
+    height: 20vh;
     background: #000000;
     padding: 20px;
+    border: none;
 }
 
 .container-menu{
@@ -22,32 +24,88 @@ header{
     width: 100%;
     align-items: flex-end;
     justify-content: center;
+    border: none;
 }
 
 .container-menu ul{
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    width: 70%;
+    height: 100%;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.4em;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .container-menu ul li{
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
 }
 
 .container-menu ul li a{
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: rgb(235, 201, 53);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 .container-menu ul li a:hover{
     color: rgb(177, 152, 40);
+    box-shadow: 0px 0px 10px 10px rgb(177, 152, 40);
+    animation: pulsar-botao 2s infinite;
+}
+
+.logo-menu-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-mobile{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-mobile:hover, .menu-mobile:active{
+    box-shadow: inset 0px 0px 10px 5px rgb(177, 152, 40);
+    background-color: rgb(112, 101, 53);
+    color: #000;
 }
 
 main{
     display: flex;
     flex: 1;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -60,7 +118,8 @@ main{
     margin-bottom: 5px;
     gap: 20px;
     justify-content: center;
-    max-width: 1200px;
+    min-width: 1024px;
+    max-width: 1400px;
     width: 100%;
 }
 
@@ -68,7 +127,8 @@ main{
     display: flex;
     background: #000000;
     padding: 20px;
-    width: 30%;        
+    min-width: 30%;    
+    min-height: 70vh;
     border-radius: 5px;
     text-align: justify;
     align-items: center;
@@ -79,13 +139,17 @@ main{
     /*background-image: url('../assets/IMG_6506.PNG');
     background-size: cover;
     background-position: center;*/
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 50vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .box .banner img{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     border-radius: 20px;
 }
 
@@ -108,8 +172,8 @@ footer .texto-direitos{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 5px;
-    width: 100%;
+    padding: 0;
+    width: 35vw;
     height: auto;  
     justify-content: space-around;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -128,7 +192,7 @@ footer .texto-direitos{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     padding-left: 5px;
-    height: 8rem;
+    height: 12rem;
 }
 
 .form-contato button{
@@ -136,7 +200,8 @@ footer .texto-direitos{
     flex-direction: column;
     margin-top: 25px;
     padding: 10px;
-    width: 60%;
+    width: 35%;
+    min-height: 10vh;
     align-items: center;
     justify-content: center;
     background-color: rgb(235, 201, 53);
@@ -145,22 +210,24 @@ footer .texto-direitos{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     color: #000;
+    animation: pulsar-botao 2s infinite;
 }
 
-.form-contato button:hover{
+.form-contato button:hover, .form-contato button:active{
     cursor: pointer;
     background-color: rgb(177, 152, 40);
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
     color: #fff;
+    animation: pulsar-botao 2s infinite;
 }
 
 .mural-contatos{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 5px;
+    padding: 0;
     padding-bottom: 10px;
-    width: 100%;
+    width: 30vw;
     height: 100%;  
     align-items: center;
     justify-content: space-around;
@@ -175,47 +242,141 @@ footer .texto-direitos{
 
 .mural-contatos img{
     width: 30%;
+    height: auto;
 }
 
-.mural-contatos img:hover{
+.mural-contatos img:hover, .mural-contatos img:hover{
     cursor: pointer;
+    background-color: rgb(177, 152, 40);
     box-shadow: 0 0 30px rgba(0, 0, 0, 1);
     border-radius: 50%;
+    animation: pulsar-botao 2s infinite;
+    position: inherit;
+}
+
+@keyframes pulsar-botao{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 600px) {
     header{
-        padding: 15px;
+        display: block;
+        position: relative;
+        min-height: 10vh;
+        max-height: 15vh;
+        padding: 0;
         margin-bottom: 5px;
+        justify-content: flex-end;
+        border: none;
+    }
+
+    .container-menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 86vh;
+        overflow: hidden;
+        background-color: #000;
+        align-items: flex-start;
     }
 
     .container-menu ul{
-        font-size: 1.0em;
+        flex-direction: column;
+        padding: 30px 0px;
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.6em;
+        background-color: #000;
     }
 
     .container-menu ul li{
-        padding: 15px;
+        border-radius: 0px;
+        padding: 20px;
+        width: 100%;
+        min-height: 25%;
+        align-items: center;
+        justify-content: center;
     }
 
-    .container {
+    .container-menu ul li a{
+        display: flex;
         flex-direction: column;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .container-menu ul li:hover, .container-menu ul li:active,
+    .container-menu ul li a:hover, .container-menu ul li a:active
+    {
+        box-shadow: inset 0px 0px 10px 5px rgb(177, 152, 40);
+        background-color: rgb(112, 101, 53);
+        color: #000;
+        font-weight: bold;
+    }
+
+    .logo-menu-mobile{
+        width: auto;
+        height: 100%;
+    }
+
+    .menu-mobile{
+        display: flex;
+        width: 25%;
+    }
+
+    .container{
+        flex-direction: row;
         align-items: center;
         gap: 15px;
+        padding: 0;
+        min-width: 320px;
     }
 
     .box {
-        width: 60%;
+        width: 95%;
+        min-height: 50vh;
     }
 
-    .banner{
+    .box .banner{
         /*background-image: url('./assets/carropeq.jpg');*/
-        height: 50vh;
-        width: 50%;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
     }
 
     .box .banner img{
+        width: auto;
+        height: 45vh;
+    }
+
+    .mural-contatos{
         width: 100%;
-        height: 50vh;
+        gap: 50px;
+        padding-bottom: 30px;
+    } 
+
+    .mural-contatos h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8em;
+        color: #000000;
+    }    
+
+    .mural-contatos img{
+        min-width: 30vw;
+        height: auto;
     }
 
     footer{
@@ -223,20 +384,149 @@ footer .texto-direitos{
     }
 
     footer .texto-direitos{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 0.8em;
-        color: rgb(177, 152, 40);
-        text-align: center;
+        font-size: 1.0em;
+        color: rgb(235, 201, 53);
     }
+
+    .form-contato{
+        margin: 5% 0;
+        min-width: 100%;
+    }
+
+    .form-contato label, .form-contato input{
+        font-size: 1.6em;
+    }
+    
+    .form-contato textarea{
+        font-size: 1.6em;
+        padding-left: 5px;
+        height: 10rem;
+    }
+    
+    .form-contato button{
+        width: 50%;
+        min-height: 8vh;
+        font-size: 1.6em;
+    }    
+
 }
 
-
 @media (max-width: 1024px) and (min-width: 601px) {
-    .container {
-        flex-wrap: wrap;
+    header{
+        padding: 15px;
+        margin-bottom: 5px;
+        height: 15vh;
     }
 
-    .box {
-        width: 45%;
+    .container-menu ul{
+        font-size: 1.1em;
+        padding: 0;
+        width: 100%;
+        gap: 5px;
+        justify-content: space-around;
+    }
+
+    .container-menu ul li{
+        padding: 0;
+    }
+
+    .container-menu ul li a{
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo-menu-mobile{
+        width: auto;
+        height: 100%;
+    }
+
+    .container{
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        min-width: 601px;
+    }
+
+    .box{
+        width: 90%;
+        min-height: 30vh;
+    }
+
+    .box .banner{
+        /*background-image: url('./assets/carropeq.jpg');*/
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .box .banner img{
+        width: 100%;
+        height: auto;
+    }
+
+    .form-contato{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 15px 10px;
+        width: 100%;
+        height: 100vh;  
+        justify-content: space-around;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.2em;
+        color: #fff;
+    }
+    
+    .form-contato input, .form-contato label{
+        font-size: 1.8em;
+    }
+    
+    .form-contato textarea{
+        font-size: 1.8em;
+        padding-left: 5px;
+        height: 10rem;
+    }
+    
+    .form-contato button{
+        width: 50%;
+        min-height: 10vh;
+        font-size: 2.0em;
+    }
+
+    .mural-contatos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 10px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 40vh;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    } 
+
+    .mural-contatos h1{
+        position: absolute;
+        top: 0;
+        font-size: 2.0em;
+        margin-top: 2%;
+    } 
+
+    .mural-contatos img{
+        margin-top: 10%;
+        width: 25%;
+        height: auto;
+    }
+
+    footer{
+        margin-top: 5px;
+    }
+
+    footer .texto-direitos{
+        font-size: 1.0em;
+        color: rgb(235, 201, 53);
     }
 }
