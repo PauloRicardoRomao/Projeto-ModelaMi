@@ -347,7 +347,7 @@ footer .texto-direitos{
 
     .box {
         width: 95%;
-        min-height: 50vh;
+        width: 90%;
     }
 
     .box .banner{
@@ -379,6 +379,17 @@ footer .texto-direitos{
         height: auto;
     }
 
+    .mural-contatos{
+        gap: 50px;
+        padding-bottom: 30px;
+    } 
+
+    .mural-contatos h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8em;
+        color: #000000;
+    }    
+
     footer{
         margin-top: 5px;
     }
@@ -392,7 +403,7 @@ footer .texto-direitos{
         margin: 5% 0;
         min-width: 100%;
     }
-
+  
     .form-contato label, .form-contato input{
         font-size: 1.6em;
     }

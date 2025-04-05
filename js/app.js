@@ -3,6 +3,7 @@ const containerMenu = document.querySelector(".container-menu");
 const body = document.querySelector("body");
 const botaoForm = document.querySelector(".container .box .form-contato button");
 
+
 if (botaoMenu && containerMenu) {
     botaoMenu.addEventListener("click", (event) => {
         if (containerMenu.style.display === 'none' || containerMenu.style.display === '') {
@@ -19,6 +20,8 @@ if (botaoMenu && containerMenu) {
             botaoMenu.style.color = '#fff';
             body.style.overflow = 'auto';
             botaoForm.style.display = 'flex';
+        } else {
+            containerMenu.style.display = 'none';
         }
     });
 }
