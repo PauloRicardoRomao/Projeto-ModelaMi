@@ -241,7 +241,7 @@ footer .texto-direitos{
 }
 
 .mural-contatos img{
-    width: 20%;
+    width: 30%;
     height: auto;
 }
 
@@ -251,6 +251,7 @@ footer .texto-direitos{
     box-shadow: 0 0 30px rgba(0, 0, 0, 1);
     border-radius: 50%;
     animation: pulsar-botao 2s infinite;
+    position: inherit;
 }
 
 @keyframes pulsar-botao{
@@ -281,19 +282,21 @@ footer .texto-direitos{
         display: none;
         position: absolute;
         width: 100%;
-        height: 50vh;
+        height: 86vh;
         overflow: hidden;
         background-color: #000;
+        align-items: flex-start;
     }
 
     .container-menu ul{
         flex-direction: column;
         padding: 30px 0px;
-        width: 100%;
+        width: 80%;
         height: 100%;
         align-items: center;
         justify-content: space-between;
         font-size: 1.6em;
+        background-color: #000;
     }
 
     .container-menu ul li{
@@ -321,6 +324,7 @@ footer .texto-direitos{
         box-shadow: inset 0px 0px 10px 5px rgb(177, 152, 40);
         background-color: rgb(112, 101, 53);
         color: #000;
+        font-weight: bold;
     }
 
     .logo-menu-mobile{
@@ -330,6 +334,7 @@ footer .texto-direitos{
 
     .menu-mobile{
         display: flex;
+        width: 25%;
     }
 
     .container{
@@ -341,8 +346,8 @@ footer .texto-direitos{
     }
 
     .box {
+        width: 95%;
         width: 90%;
-        min-height: 50vh;
     }
 
     .box .banner{
@@ -355,6 +360,23 @@ footer .texto-direitos{
     .box .banner img{
         width: auto;
         height: 45vh;
+    }
+
+    .mural-contatos{
+        width: 100%;
+        gap: 50px;
+        padding-bottom: 30px;
+    } 
+
+    .mural-contatos h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8em;
+        color: #000000;
+    }    
+
+    .mural-contatos img{
+        min-width: 30vw;
+        height: auto;
     }
 
     .mural-contatos{
@@ -373,12 +395,15 @@ footer .texto-direitos{
     }
 
     footer .texto-direitos{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 0.7em;
-        color: rgb(177, 152, 40);
-        text-align: center;
+        font-size: 1.0em;
+        color: rgb(235, 201, 53);
     }
 
+    .form-contato{
+        margin: 5% 0;
+        min-width: 100%;
+    }
+  
     .form-contato label, .form-contato input{
         font-size: 1.6em;
     }
@@ -405,7 +430,7 @@ footer .texto-direitos{
     }
 
     .container-menu ul{
-        font-size: 1.0em;
+        font-size: 1.1em;
         padding: 0;
         width: 100%;
         gap: 5px;
@@ -435,8 +460,8 @@ footer .texto-direitos{
     }
 
     .box{
-        max-width: 90%;
-        min-height: 50vh;
+        width: 90%;
+        min-height: 30vh;
     }
 
     .box .banner{
@@ -447,8 +472,8 @@ footer .texto-direitos{
     }
 
     .box .banner img{
-        width: auto;
-        height: 45vh;
+        width: 100%;
+        height: auto;
     }
 
     .form-contato{
@@ -457,7 +482,7 @@ footer .texto-direitos{
         gap: 5px;
         padding: 15px 10px;
         width: 100%;
-        height: 700px;  
+        height: 100vh;  
         justify-content: space-around;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 1.2em;
@@ -476,16 +501,20 @@ footer .texto-direitos{
     
     .form-contato button{
         width: 50%;
-        min-height: 9vh;
+        min-height: 10vh;
         font-size: 2.0em;
     }
 
     .mural-contatos{
         flex-direction: row;
+        flex-wrap: wrap;
         position: relative;
         gap: 10px;
         padding-bottom: 30px;
-        min-height: 50vh;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 40vh;
+        width: 100%;
         align-items: center;
         justify-content: space-around;
     } 
@@ -498,8 +527,9 @@ footer .texto-direitos{
     } 
 
     .mural-contatos img{
-        margin-top: 5%;
+        margin-top: 10%;
         width: 25%;
+        height: auto;
     }
 
     footer{
@@ -507,9 +537,7 @@ footer .texto-direitos{
     }
 
     footer .texto-direitos{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1em;
-        color: rgb(177, 152, 40);
-        text-align: center;
+        font-size: 1.0em;
+        color: rgb(235, 201, 53);
     }
 }
