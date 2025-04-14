@@ -11,10 +11,11 @@
         <img src="assets/logo-mobile.png" alt="logo" class="logo-menu-mobile">
         <nav class="container-menu">
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="">procedimentos</a></li>
-                <li><a href="">sobre</a></li>
-                <li><a href="contato.html">contato</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="procedimentos.html">PROCEDIMENTOS</a></li>
+                <li><a href="afinese.html">AFINE-SE</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
             </ul>
         </nav>
         <span class="menu-mobile">&#9776;</span>
@@ -23,7 +24,7 @@
     <main>
         <div class="container">
             <section class="box">
-                <div class="banner">
+                <div class="banner" onclick="abreModulo('box1')" id="box1">
                     <img src="assets/6506med.png"
                         srcset="assets/6506peq.png 480w"
                         sizes="(max-width: 1024px) 480px"
@@ -33,7 +34,7 @@
                 </div>
             </section>
             <section class="box">
-                <div class="banner">
+                <div class="banner" onclick="abreModulo('box2')" id="box2">
                     <img src="assets/6505med.png"
                         srcset="assets/6505peq.png 480w"
                         sizes="(max-width: 1024px) 480px"
@@ -43,7 +44,7 @@
                 </div>
             </section>
             <section class="box">
-                <div class="banner">
+                <div class="banner" onclick="abreModulo('box3')" id="box3">
                     <img src="assets/6507med.png"
                         srcset="assets/6507peq.png 480w"
                         sizes="(max-width: 1024px) 480px"
@@ -59,6 +60,49 @@
             </section>
         </div>
     </main>
+
+    <modal class="container-modulo-principal">
+        <div class="conteudo-modulo" id="modulo1">
+            <button type="button" class="close" onclick="fechaModulo()">⨉</button>
+            <h1 class="titulo-modulo">Teste</h1>
+            <p class="texto-modulo">Teste</p>
+            <div class="container-img-modulo">
+                <img src="assets/6506med.png"
+                    srcset="assets/6506peq.png 480w"
+                    sizes="(max-width: 1024px) 480px"
+                    alt="Imagem responsiva" class="img-modulo-1"
+                >
+            </div>
+        </div>
+    </modal>
+    <modal class="container-modulo-principal">
+        <div class="conteudo-modulo" id="modulo2">
+            <button type="button" class="close" onclick="fechaModulo()">⨉</button>
+            <h1 class="titulo-modulo">Teste</h1>
+            <p class="texto-modulo">Teste</p>
+            <div class="container-img-modulo">
+                <img src="assets/6505med.png"
+                    srcset="assets/6505peq.png 480w"
+                    sizes="(max-width: 1024px) 480px"
+                    alt="Imagem responsiva" class="img-modulo-1"
+                >
+            </div>
+        </div>
+    </modal>
+    <modal class="container-modulo-principal">
+        <div class="conteudo-modulo" id="modulo3">
+            <button type="button" class="close" onclick="fechaModulo()">⨉</button>
+            <h1 class="titulo-modulo">Teste</h1>
+            <p class="texto-modulo">Teste</p>
+            <div class="container-img-modulo">
+                <img src="assets/6507med.png"
+                    srcset="assets/6507peq.png 480w"
+                    sizes="(max-width: 1024px) 480px"
+                    alt="Imagem responsiva" class="img-modulo-1"
+                >
+            </div>
+        </div>
+    </modal>
 
     <footer>
         <p class="texto-direitos">© 2025 - Todos os direitos reservados</p>

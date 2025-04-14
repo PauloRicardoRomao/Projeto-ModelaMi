@@ -22,3 +22,47 @@ if (botaoMenu && containerMenu) {
         }
     });
 }
+
+
+
+let moduloAberto = null;
+
+function abreModulo(modulo) {
+    const containerModulo = document.querySelectorAll('.container-modulo-principal');
+    const conteudoModulo = document.querySelectorAll('#' + modulo);
+  
+    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {
+      containerModulo.forEach(container => {
+        container.style.display = 'flex';
+      });
+    }
+  
+    if (conteudoModulo[0] && conteudoModulo[0].style.display !== 'flex') {
+      conteudoModulo.forEach(conteudo => {
+        conteudo.style.display = 'flex';
+      });
+    }
+
+    moduloAberto = modulo;
+    console.log(moduloAberto);
+}
+
+
+function fechaModulo(){
+    if (moduloAberto) {
+        const containerModulo = document.querySelectorAll('.container-modulo-principal');
+        const conteudoModulo = document.querySelectorAll('#' + moduloAberto);
+ 
+
+        containerModulo.forEach(container => {
+            container.style.display = 'none';
+        });
+
+       /* conteudoModulo.forEach(conteudo => {
+            conteudo.style.display = 'none';
+        });*/
+
+        
+        moduloAberto = null; // Reseta o ID do módulo aberto
+    }
+}
