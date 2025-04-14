@@ -35,7 +35,7 @@ header{
     height: 100%;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.4em;
+    font-size: 1.2em;
     align-items: center;
     justify-content: space-around;
 }
@@ -45,6 +45,7 @@ header{
     flex-direction: column;
     height: 100%;
     width: 25%;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border: none;
@@ -55,6 +56,7 @@ header{
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    flex-wrap: wrap;
     color: rgb(235, 201, 53);
     height: 100%;
     width: 100%;
@@ -151,6 +153,114 @@ main{
     width: 100%;
     height: 60vh;
     border-radius: 20px;
+}
+
+.container-modulo-principal{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #83838380;
+    z-index: 98;
+}
+
+.container-modulo-principal:target{
+	display: flex;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.container-modulo-principal .conteudo-modulo{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 70%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #242424;
+    border-radius: 0 40px 0 40px;
+    box-shadow: 0px 0px 10px 5px #000000;
+}
+
+.close{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #242424;
+    text-decoration: none;
+    font-size: 1.5em;
+	font-weight: bold;
+    z-index: 99;
+    border: none;
+    cursor: pointer;
+}
+
+.close:hover, .close:active{
+    background-color: #e21515;
+    color: #fff;
+    box-shadow: inset 0px 0px 20px 5px #242424;
+}
+
+.conteudo-modulo .titulo-modulo{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    padding: 20px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+    text-shadow: 0px 0px 12px goldenrod;
+}
+
+.conteudo-modulo .texto-modulo{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    padding: 10% 5% 5% 5%;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.conteudo-modulo .container-img-modulo{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 20px 20px 20px;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-modulo .img-modulo-1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -266,6 +376,74 @@ footer .texto-direitos{
     }
 }
 
+
+/*SOBRE*/
+
+.container-sobre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-sobre .container-img-sobre{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sobre .conteudo1-sobre, .container-sobre .conteudo2-sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sobre .conteudo1-sobre .titulo-conteudo-sobre, 
+.conteudo2-sobre .titulo2-conteudo-sobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    color: #000;
+}
+
+.conteudo-sobre .titulo2-conteudo-sobre{
+    font-size: 1.6em;
+}
+
+.container-sobre .conteudo1-sobre .texto-conteudo-sobre, 
+.container-sobre .conteudo2-sobre .texto-conteudo-sobre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: #000;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+
+
+
+
 @media (max-width: 600px) {
     header{
         display: block;
@@ -282,10 +460,11 @@ footer .texto-direitos{
         display: none;
         position: absolute;
         width: 100%;
-        height: 70vh;
+        height: 85vh;
         overflow: hidden;
         background-color: #000;
         align-items: flex-start;
+        z-index: 999;
     }
 
     .container-menu ul{
@@ -303,7 +482,7 @@ footer .texto-direitos{
         border-radius: 0px;
         padding: 20px;
         width: 100%;
-        min-height: 25%;
+        min-height: 20%;
         align-items: center;
         justify-content: center;
     }
@@ -419,7 +598,7 @@ footer .texto-direitos{
     }
 
     .container-menu ul{
-        font-size: 1.1em;
+        font-size: 0.8em;
         padding: 0;
         width: 100%;
         gap: 5px;
@@ -428,11 +607,13 @@ footer .texto-direitos{
 
     .container-menu ul li{
         padding: 0;
+        flex-wrap: wrap;
     }
 
     .container-menu ul li a{
         width: 100%;
         height: 100%;
+        flex-wrap: wrap;
     }
 
     .logo-menu-mobile{
