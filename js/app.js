@@ -31,16 +31,25 @@ function abreModulo(modulo) {
     const containerModulo = document.querySelectorAll('.container-modulo-principal');
     const conteudoModulo = document.querySelectorAll('#' + modulo);
   
+    let tituloConteudoModulo = document.querySelectorAll('#' + moduloAberto + ' .titulo-modulo');
+    let containerImgModulo = document.querySelectorAll('#' + moduloAberto + ' .container-img-modulo');
+       
+
     if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {
-      containerModulo.forEach(container => {
-        container.style.display = 'flex';
-      });
+        containerModulo.forEach(container => {
+            container.style.display = 'flex';
+        });
     }
   
     if (conteudoModulo[0] && conteudoModulo[0].style.display !== 'flex') {
-      conteudoModulo.forEach(conteudo => {
-        conteudo.style.display = 'flex';
-      });
+        conteudoModulo.forEach(conteudo => {
+            conteudo.style.display = 'flex';
+            let indicePagina = [1, 2, 3];
+            let textoTitulo = () =>{
+                let titulo = document.querySelectorAll('#box'+ indicePagina).textContent;
+            };
+            tituloConteudoModulo.textContent = 
+        });
     }
 
     moduloAberto = modulo;
@@ -58,7 +67,9 @@ function fechaModulo(){
             container.style.display = 'none';
         });
 
-       /* conteudoModulo.forEach(conteudo => {
+        
+
+        /* conteudoModulo.forEach(conteudo => {
             conteudo.style.display = 'none';
         });*/
 
