@@ -2,6 +2,10 @@ const botaoMenu = document.querySelector(".menu-mobile");
 const containerMenu = document.querySelector(".container-menu");
 const body = document.querySelector("body");
 const botaoForm = document.querySelector(".container .box .form-contato button");
+const modulo1 = document.getElementById('modulo1');
+const modulo2 = document.getElementById('modulo2');
+const modulo3 = document.getElementById('modulo3');
+
 
 if (botaoMenu && containerMenu) {
     botaoMenu.addEventListener("click", (event) => {
@@ -23,62 +27,32 @@ if (botaoMenu && containerMenu) {
     });
 }
 
-
-function fechaModulo(){
-    if (moduloAberto) {
-        const containerModulo = document.querySelectorAll('.container-modulo-principal');
-        const conteudoModulo = document.querySelectorAll('#' + moduloAberto);
- 
-
-        containerModulo.forEach(container => {
-            container.style.display = 'none';
-            conteudoModulo.style.display = 'none';
-        });
-
-        
-
-        /* conteudoModulo.forEach(conteudo => {
-            conteudo.style.display = 'none';
-        });*/
-
-        
-        moduloAberto = null; // Reseta o ID do módulo aberto
-    }
+function chamaModal1(){
+    modulo1.style.display = 'flex';
 }
 
+function chamaModal2(){
+    modulo2.style.display = 'flex';
+}
+
+function chamaModal3(){
+    modulo3.style.display = 'flex';
+}
+
+const boxModulo1 = document.getElementById('box1');
+boxModulo1.addEventListener("click", (event) => chamaModal1());
+
+const boxModulo2 = document.getElementById('box2');
+boxModulo2.addEventListener("click", (event) => chamaModal2());
+
+const boxModulo3 = document.getElementById('box3');
+boxModulo3.addEventListener("click", (event) => chamaModal3());
 
 
-document.querySelectorAll('#box1').addEventListener('click', function(){
-    let containerModulo = document.querySelectorAll('.container-modulo-principal');
-    let conteudoModulo = document.querySelectorAll('#modulo1');
-    
-    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {    
-        containerModulo.style.display = 'flex';
-        conteudoModulo.style.display = 'flex';
-    }
-});
-
-document.querySelectorAll('#box2').addEventListener('click', function(){
-    let containerModulo = document.querySelectorAll('.container-modulo-principal');
-    let conteudoModulo = document.querySelectorAll('#modulo2');
-    
-    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {    
-        containerModulo.style.display = 'flex';
-        conteudoModulo.style.display = 'flex';
-    }
-})
-
-document.querySelectorAll('#box3 img').addEventListener('click', function(){
-    let containerModulo = document.querySelectorAll('.container-modulo-principal');
-    let conteudoModulo = document.querySelectorAll('#modulo3');
-
-    // Verifica se algum elemento foi encontrado antes de tentar acessar o índice 0
-    if (containerModulo.length > 0 && conteudoModulo.length > 0) {
-        // Acessa o primeiro elemento do NodeList e verifica seu estilo
-        if (containerModulo[0].style.display !== 'flex') {
-            // Acessa o primeiro elemento do NodeList para modificar o estilo
-            containerModulo[0].style.display = 'flex';
-            conteudoModulo[0].style.display = 'flex';
-        }
-    }
-});
+function fechaModulo(){
+    if (modulo1.style.display === 'flex' || modulo2.style.display === 'flex' || modulo3.style.display === 'flex'){
+        modulo1.style.display = 'none';
+        modulo2.style.display = 'none';
+        modulo3.style.display = 'none';
+    } 
+}
