@@ -24,30 +24,6 @@ if (botaoMenu && containerMenu) {
 }
 
 
-
-let moduloAberto = null;
-
-function abreModulo(modulo) {
-    const containerModulo = document.querySelectorAll('.container-modulo-principal');
-    const conteudoModulo = document.querySelectorAll('#' + modulo);
-  
-    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {
-      containerModulo.forEach(container => {
-        container.style.display = 'flex';
-      });
-    }
-  
-    if (conteudoModulo[0] && conteudoModulo[0].style.display !== 'flex') {
-      conteudoModulo.forEach(conteudo => {
-        conteudo.style.display = 'flex';
-      });
-    }
-
-    moduloAberto = modulo;
-    console.log(moduloAberto);
-}
-
-
 function fechaModulo(){
     if (moduloAberto) {
         const containerModulo = document.querySelectorAll('.container-modulo-principal');
@@ -56,9 +32,12 @@ function fechaModulo(){
 
         containerModulo.forEach(container => {
             container.style.display = 'none';
+            conteudoModulo.style.display = 'none';
         });
 
-       /* conteudoModulo.forEach(conteudo => {
+        
+
+        /* conteudoModulo.forEach(conteudo => {
             conteudo.style.display = 'none';
         });*/
 
@@ -66,3 +45,40 @@ function fechaModulo(){
         moduloAberto = null; // Reseta o ID do módulo aberto
     }
 }
+
+
+
+document.querySelectorAll('#box1').addEventListener('click', function(){
+    let containerModulo = document.querySelectorAll('.container-modulo-principal');
+    let conteudoModulo = document.querySelectorAll('#modulo1');
+    
+    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {    
+        containerModulo.style.display = 'flex';
+        conteudoModulo.style.display = 'flex';
+    }
+});
+
+document.querySelectorAll('#box2').addEventListener('click', function(){
+    let containerModulo = document.querySelectorAll('.container-modulo-principal');
+    let conteudoModulo = document.querySelectorAll('#modulo2');
+    
+    if (containerModulo[0] && containerModulo[0].style.display !== 'flex') {    
+        containerModulo.style.display = 'flex';
+        conteudoModulo.style.display = 'flex';
+    }
+})
+
+document.querySelectorAll('#box3 img').addEventListener('click', function(){
+    let containerModulo = document.querySelectorAll('.container-modulo-principal');
+    let conteudoModulo = document.querySelectorAll('#modulo3');
+
+    // Verifica se algum elemento foi encontrado antes de tentar acessar o índice 0
+    if (containerModulo.length > 0 && conteudoModulo.length > 0) {
+        // Acessa o primeiro elemento do NodeList e verifica seu estilo
+        if (containerModulo[0].style.display !== 'flex') {
+            // Acessa o primeiro elemento do NodeList para modificar o estilo
+            containerModulo[0].style.display = 'flex';
+            conteudoModulo[0].style.display = 'flex';
+        }
+    }
+});

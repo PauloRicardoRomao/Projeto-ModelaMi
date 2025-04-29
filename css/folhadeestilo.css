@@ -169,6 +169,10 @@ main{
     overflow: hidden;
     background-color: #83838380;
     z-index: 98;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
 }
 
 .container-modulo-principal:target{
@@ -178,7 +182,7 @@ main{
 }
 
 .container-modulo-principal .conteudo-modulo{
-    display: flex;
+    display: none;
     flex-direction: row;
     position: relative;
     width: 70%;
@@ -251,7 +255,7 @@ main{
     flex-direction: column;
     padding: 10% 20px 20px 20px;
     width: 40%;
-    height: 100%;
+    height: auto;
     align-items: center;
     justify-content: center;
 }
