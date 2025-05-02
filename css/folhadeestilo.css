@@ -502,7 +502,6 @@ footer .texto-direitos{
 
 .container-grid{
     display: grid;
-    grid: 1;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 500px);
     gap: 20px;
@@ -731,6 +730,12 @@ footer .texto-direitos{
         color: #000;
     }
 
+
+    .container-grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 500px);
+    }
+    
 }
 
 @media (max-width: 1024px) and (min-width: 601px) {
