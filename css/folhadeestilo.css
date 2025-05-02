@@ -500,6 +500,23 @@ footer .texto-direitos{
     color: #000;
 }
 
+.container-grid{
+    display: grid;
+    grid: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    gap: 20px;
+    padding: 20px;
+    min-height: 150vh;
+}
+
+.container-grid .box{
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
 
 
 @media (max-width: 600px) {
