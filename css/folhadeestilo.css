@@ -142,6 +142,12 @@ main{
     box-shadow: 0 0 12px 5px #000;
 }
 
+.box:hover{
+    background-color: #3b3b3b;
+    box-shadow: 0 0 12px 5px #fff;
+    cursor: pointer;    
+}
+
 .box .banner{
     /*background-image: url('../assets/IMG_6506.PNG');
     background-size: cover;
@@ -242,9 +248,11 @@ main{
     padding: 10% 5% 5% 5%;
     align-items: center;
     justify-content: center;
+    text-align: justify;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.4em;
+    font-size: 1.0em;
     color: #fff;
+    line-height: 1.4em;
 }
 
 .conteudo-modulo .container-img-modulo{
@@ -684,7 +692,7 @@ footer .texto-direitos{
     .container-modulo-principal .conteudo-modulo{
         flex-direction: column;
         width: 90%;
-        height: 80%;
+        min-height: 50%;
         padding: 5% 0;
         justify-content: space-between;
     }
@@ -697,6 +705,7 @@ footer .texto-direitos{
     }
 
     .conteudo-modulo .titulo-modulo{
+        position: relative;
         padding: 20px;
         width: 100%;
         text-align: center;
@@ -705,18 +714,20 @@ footer .texto-direitos{
 
     .conteudo-modulo .texto-modulo{
         width: 100%;
-        height: 30%;
+        height: 90%;
         text-align: justify;
         font-size: 1.4em;
-        padding: 2%;
+        padding: 0 5% 0 5%;
+        overflow: hidden;
     }
     
     .conteudo-modulo .container-img-modulo{
-        display: flex;
+        display: none;
         flex-direction: column;
         padding: 2% 5%;
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 30%;
+        overflow: hidden;
     }
     
     .conteudo-modulo .img-modulo{
