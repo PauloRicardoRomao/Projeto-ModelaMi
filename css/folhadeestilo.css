@@ -522,7 +522,7 @@ footer .texto-direitos{
 .container-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     gap: 20px;
     padding: 20px;
     min-height: max-content;
@@ -530,12 +530,13 @@ footer .texto-direitos{
 }
 
 .container-grid .box{
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s;
     display: flex;
     flex-direction: column;
+    position: relative;
     min-height: 300px;
+    overflow: hidden;
+    justify-content: space-around;
+    transition: transform 0.3s;
 }
 
 .container-grid .box:hover{
@@ -547,7 +548,7 @@ footer .texto-direitos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12;
     padding: 0;
     align-items: center;
     justify-content: flex-start;
@@ -562,12 +563,18 @@ footer .texto-direitos{
 }
 
 .container-grid .box .banner .desc-procedimento{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 10px 5px;
+    height: 60%;
+    justify-content: center;
+    align-items: flex-start;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-align: justify;
+    line-height: 1.4em;
 }
 
 
