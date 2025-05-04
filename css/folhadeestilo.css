@@ -142,7 +142,7 @@ main{
     box-shadow: 0 0 12px 5px #000;
 }
 
-.box:hover{
+#box-home:hover{
     background-color: #3b3b3b;
     box-shadow: 0 0 12px 5px #fff;
     cursor: pointer;    
@@ -243,7 +243,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 50%;
+    width: 60%;
     height: 100%;
     padding: 10% 5% 5% 5%;
     align-items: center;
@@ -253,6 +253,7 @@ main{
     font-size: 1.0em;
     color: #fff;
     line-height: 1.4em;
+    text-indent: 2em;
 }
 
 .conteudo-modulo .container-img-modulo{
@@ -510,6 +511,7 @@ footer .texto-direitos{
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
+    line-height: 1.6em;
     color: #fff;
     text-indent: 2em;
     text-align: justify;
@@ -575,6 +577,7 @@ footer .texto-direitos{
     font-size: 1.0em;
     text-align: justify;
     line-height: 1.4em;
+    text-indent: 2em;
 }
 
 
