@@ -587,7 +587,6 @@ footer .texto-direitos{
         position: relative;
         min-height: 8vh;
         padding: 0;
-        margin-bottom: 5px;
         justify-content: flex-end;
         border: none;
     }
@@ -663,9 +662,19 @@ footer .texto-direitos{
         min-width: 320px;
     }
 
-    .box {
+    #box-home {
         width: 95%;
         min-height: 50vh;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #box-home:first-child {
+        margin-top: 10%;
+    }
+
+    #box-home:last-child {
+        margin-bottom: 10%;
     }
 
     .box .banner{
