@@ -879,6 +879,26 @@ footer .texto-direitos{
     }
 
 
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    padding: 20px;
+    min-height: max-content;
+    width: 100vw;
+}
+
+.container-grid .box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    justify-content: space-around;
+    transition: transform 0.3s;
+}
+
     
 }
 
@@ -1011,11 +1031,15 @@ footer .texto-direitos{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         justify-content: center;
-        margin-left: 20px;
+     /*   margin-left: 20px;*/
+    }
+
+    .container-grid .box{
+        width: 100%;
     }
 
     .container-grid .box .banner img{
-        width: 110%;
+        width: 100%;
         height: auto;
         object-fit: cover;
     }
