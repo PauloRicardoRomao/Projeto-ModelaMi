@@ -56,3 +56,4 @@ function fechaModulo(){
         modulo3.style.display = 'none';
     } 
 }
+
