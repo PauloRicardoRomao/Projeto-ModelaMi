@@ -57,3 +57,17 @@ function fechaModulo(){
     } 
 }
 
+
+const btnIntagram = document.getElementById('btn-instagram');
+const btnFacebook = document.getElementById('btn-facebook');
+const btnWpp = document.getElementById('btn-wpp');
+
+
+function abreInstagram(){
+    window.open('https://www.instagram.com/modela_mi_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank');
+}
+
+function abreWpp(){
+    window.open('https://api.whatsapp.com/send?phone=5514997044317');
+}
+
