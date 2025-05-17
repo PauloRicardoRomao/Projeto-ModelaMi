@@ -71,3 +71,16 @@ function abreWpp(){
     window.open('https://api.whatsapp.com/send?phone=5514997044317');
 }
 
+
+
+
+
+function chamaModalProcedimentos(){
+    const moduloProcedimentos = document.getElementById('agendamento-modulo-1');
+    moduloProcedimentos.style.display = 'flex';
+}
+document.getElementById('box-procedimento1').addEventListener("click", (event) => chamaModalProcedimentos());
+
+
+const dadosFormulario = '{}';
+const dadosTratados = JSON.parse(dadosFormulario);

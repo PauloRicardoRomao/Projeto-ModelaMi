@@ -24,7 +24,7 @@
     
     <main>
         <div class="container-grid">
-            <section class="box">
+            <section class="box" id="box-procedimento1">
                 <div class="banner" id="box2">
                     <img src="./assets/img downl/Emagrecimento1.jpg"
                         srcset="./assets/img downl/Emagrecimento1.jpg 480w"
@@ -142,6 +142,31 @@
             </section>
         </div>
     </main>
+
+
+    <!--MOdals para realizar agendamentos-->
+
+
+    <modal class="container-modulo-principal" id="agendamento-modulo-1">
+        <div class="conteudo-modulo-procedimentos">
+            <button type="button" class="close" onclick="fechaModulo()">⨉</button>
+            <h1 class="titulo-modulo">Criolipólise</h1>
+            <form class="form-modulo">
+                <label for="txt-nome">Nome:</label>
+                <input type="text" name="txt-nome" id="txt-form">
+                <label for="txt-nome">Sobrenome:</label>
+                <input type="text" name="txt-nome" id="txt-form">
+                <label for="txt-nome">Email:</label>
+                <input type="text" name="txt-nome" id="txt-form">
+                <label for="txt-nome">Telefone:</label>
+                <input type="text" name="txt-nome" id="txt-form">
+                <button type="button" id="continuar-agendamento">Continuar Agendamento</button>
+            </form>
+        </div>
+    </modal>
+
+    <!---->
+
 
     <footer>
         <p class="texto-direitos">© 2025 - Todos os direitos reservados</p>
