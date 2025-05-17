@@ -149,9 +149,9 @@
 
     <modal class="container-modulo-principal" id="agendamento-modulo-1">
         <div class="conteudo-modulo-procedimentos">
-            <button type="button" class="close" onclick="fechaModulo()">⨉</button>
-            <h1 class="titulo-modulo">Criolipólise</h1>
-            <form class="form-modulo">
+            <button type="button" class="close" onclick="fechaModuloAgendamento()">⨉</button>
+            <h1 class="titulo-modulo">Agendamento</h1>
+            <form class="form-modulo" id="form-modulo1">
                 <label for="txt-nome">Nome:</label>
                 <input type="text" name="txt-nome" id="txt-form">
                 <label for="txt-nome">Sobrenome:</label>
@@ -161,6 +161,26 @@
                 <label for="txt-nome">Telefone:</label>
                 <input type="text" name="txt-nome" id="txt-form">
                 <button type="button" id="continuar-agendamento">Continuar Agendamento</button>
+            </form>
+            <div class="img-modulo-procedimentos">
+                <img src="./assets/img downl/Emagrecimento1.jpg"
+                            srcset="./assets/img downl/Emagrecimento1.jpg 480w"
+                            sizes="(max-width: 1024px) 480px"
+                            alt="Imagem responsiva"
+                            id="img-modulo-agendamento"
+                >
+            </div>
+            <form class="form-modulo" id="form-modulo2">
+                <label for="txt-data-hora">Selecione a data e hora:</label>
+                <input type="datetime-local" name="txt-data-hora" id="txt-data-hora">
+                <label for="combo-local">Local:</label>
+                <select name="combo-local" id="combo-local" required>
+                    <option value="1">
+                        Taquarituba - SP. 
+                        Rua Doutor Campos Sales, nº 472 A, Centro
+                    </option>
+                </select>
+                <button type="button" id="confirmar-agendamento">Confirmar Agendamento</button>
             </form>
         </div>
     </modal>

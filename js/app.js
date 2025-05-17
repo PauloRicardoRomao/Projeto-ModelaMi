@@ -5,6 +5,7 @@ const botaoForm = document.querySelector(".container .box .form-contato button")
 const modulo1 = document.getElementById('modulo1');
 const modulo2 = document.getElementById('modulo2');
 const modulo3 = document.getElementById('modulo3');
+const moduloProcedimentos = document.getElementById('agendamento-modulo-1');
 
 
 if (botaoMenu && containerMenu) {
@@ -50,10 +51,12 @@ boxModulo3.addEventListener("click", (event) => chamaModal3());
 
 
 function fechaModulo(){
-    if (modulo1.style.display === 'flex' || modulo2.style.display === 'flex' || modulo3.style.display === 'flex'){
+    if (modulo1.style.display === 'flex' || modulo2.style.display === 'flex' || 
+    modulo3.style.display === 'flex' || moduloProcedimentos.style.display === 'flex'){
         modulo1.style.display = 'none';
         modulo2.style.display = 'none';
         modulo3.style.display = 'none';
+        moduloProcedimentos.style.display = 'none';
     } 
 }
 
@@ -76,7 +79,6 @@ function abreWpp(){
 
 
 function chamaModalProcedimentos(){
-    const moduloProcedimentos = document.getElementById('agendamento-modulo-1');
     moduloProcedimentos.style.display = 'flex';
 }
 document.getElementById('box-procedimento1').addEventListener("click", (event) => chamaModalProcedimentos());
@@ -84,3 +86,24 @@ document.getElementById('box-procedimento1').addEventListener("click", (event) =
 
 const dadosFormulario = '{}';
 const dadosTratados = JSON.parse(dadosFormulario);
+
+function fechaModuloAgendamento(){
+    if(moduloProcedimentos.style.display === 'flex'){
+        moduloProcedimentos.style.display = 'none';
+    }
+}
+
+function continuarAgendamento(){
+    let formInicial = document.getElementById('form-modulo1');
+    let formFinal = document.getElementById('form-modulo2');
+    let imgForm = document.getElementById('img-modulo-agendamento');
+
+    formInicial.style.display = 'none';
+    
+    imgForm.style.transition = 'left 0.5s ease-out, transform 0.5s ease-out';
+    formFinal.style.display = 'flex'  
+}
+
+
+
+document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
