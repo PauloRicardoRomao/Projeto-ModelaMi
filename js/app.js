@@ -88,8 +88,16 @@ const dadosFormulario = '{}';
 const dadosTratados = JSON.parse(dadosFormulario);
 
 function fechaModuloAgendamento(){
+    let formInicial = document.getElementById('form-modulo1');
+    let formFinal = document.getElementById('form-modulo2');
+    let contImg = document.getElementById('img-modulo-agendamento');
+    
     if(moduloProcedimentos.style.display === 'flex'){
         moduloProcedimentos.style.display = 'none';
+        
+        formInicial.style.display = 'flex';
+        formFinal.style.display = 'none';
+        contImg.style.borderRadius = '0%';
     }
 }
 
@@ -97,13 +105,15 @@ function continuarAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
     let formFinal = document.getElementById('form-modulo2');
     let imgForm = document.getElementById('img-modulo-agendamento');
-
+    
     formInicial.style.display = 'none';
     
     imgForm.style.transition = 'left 0.5s ease-out, transform 0.5s ease-out';
     formFinal.style.display = 'flex'  
+    imgForm.style.borderRadius = '0 40px 0 40px';
 }
 
 
 
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
+
