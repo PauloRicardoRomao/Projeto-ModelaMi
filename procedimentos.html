@@ -169,21 +169,21 @@
 
 
     <modal class="container-modulo-principal" id="agendamento-modulo-1">
-        <div class="conteudo-modulo-procedimentos">
+        <div class="conteudo-modulo-procedimentos" id="conteudo-modulo-procedimentos">
             <button type="button" class="close" onclick="fechaModuloAgendamento()">⨉</button>
             <h1 class="titulo-modulo">Agendamento</h1>
             <form class="form-modulo" id="form-modulo1">
                 <label for="txt-nome">Nome:</label>
-                <input type="text" name="txt-nome" id="txt-form">
+                <input type="text" name="txt-nome" id="txt-nome" required>
                 <label for="txt-nome">Sobrenome:</label>
-                <input type="text" name="txt-nome" id="txt-form">
+                <input type="text" name="txt-nome" id="txt-sobrenome" required>
                 <label for="txt-nome">Email:</label>
-                <input type="text" name="txt-nome" id="txt-form">
+                <input type="text" name="txt-nome" id="txt-email" required>
                 <label for="txt-nome">Telefone:</label>
-                <input type="text" name="txt-nome" id="txt-form">
+                <input type="tel" name="txt-nome" id="txt-cel" required>
                 <button type="button" id="continuar-agendamento">Continuar Agendamento</button>
             </form>
-            <div class="img-modulo-procedimentos">
+            <div class="img-modulo-procedimentos" id="container-img-form">
                 <img src="""
                             alt="Imagem responsiva"
                             id="img-modulo-agendamento"
@@ -195,7 +195,7 @@
             </div>
             <form class="form-modulo" id="form-modulo2">
                 <label for="txt-data-hora">Selecione a data e hora:</label>
-                <input type="datetime-local" name="txt-data-hora" id="txt-data-hora">
+                <input type="datetime-local" name="txt-data-hora" id="txt-data-hora" required>
                 <label for="combo-local">Local:</label>
                 <select name="combo-local" id="combo-local" required>
                     <option value="1">
