@@ -81,11 +81,10 @@ function abreWpp(){
 function chamaModalProcedimentos(){
     moduloProcedimentos.style.display = 'flex';
 }
-document.getElementById('box-procedimento1').addEventListener("click", (event) => chamaModalProcedimentos());
-
 
 const dadosFormulario = '{}';
 const dadosTratados = JSON.parse(dadosFormulario);
+
 
 function fechaModuloAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
@@ -113,7 +112,21 @@ function continuarAgendamento(){
     imgForm.style.borderRadius = '0 40px 0 40px';
 }
 
-
-
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
 
+function alteraProcedimentoAgendamento(tituloBox, imgBox){
+    let tituloProcedimento = document.getElementById(tituloBox);
+    let imgProcedimento = document.getElementById(imgBox);
+
+    let tituloAgendamento = document.getElementById('titulo-procedimento-agendamento');
+    let imgAgendamento = document.getElementById('img-modulo-agendamento');
+
+    if(tituloProcedimento && imgProcedimento){
+        tituloAgendamento.innerText = tituloProcedimento.innerText;
+        let srcProcedimento = imgProcedimento.getAttribute('src');
+        imgAgendamento.setAttribute('src', srcProcedimento);
+        chamaModalProcedimentos();
+    }else{
+        console.warn("Elemento 'tituloBox' ou 'imgBox' não encontrado.");
+    }
+}
