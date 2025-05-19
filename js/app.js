@@ -2,6 +2,8 @@ const botaoMenu = document.querySelector(".menu-mobile");
 const containerMenu = document.querySelector(".container-menu");
 const body = document.querySelector("body");
 const botaoForm = document.querySelector(".container .box .form-contato button");
+const moduloProcedimentos = document.getElementById('agendamento-modulo-1');
+
 
 if (botaoMenu && containerMenu) {
     botaoMenu.addEventListener("click", (event) => {
@@ -43,6 +45,7 @@ function chamaModal3(){
 }
 const boxModulo3 = document.getElementById('box3');
 boxModulo3.addEventListener("click", (event) => chamaModal3());
+
 
 function fechaModulo(){
     if (modulo1.style.display === 'flex' || modulo2.style.display === 'flex' || 
