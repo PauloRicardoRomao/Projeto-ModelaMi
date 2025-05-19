@@ -169,5 +169,10 @@ function confirmarAgendamento(){
     novoParagrafo.style.marginTop = '5%';
     novoParagrafo.style.justifyContent = 'center';
     novoParagrafo.style.alignItems = 'center';
+    nomeFormulario.value = "";
+    sobrenomeFormulario.value = "";
+    emailFormulario.value = ""; 
+    telefoneFormulario.value = "";
+    dataHoraFormulario.value = "";
 }
 document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento());
