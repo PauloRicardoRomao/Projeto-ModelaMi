@@ -92,13 +92,16 @@ function fechaModuloAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
     let formFinal = document.getElementById('form-modulo2');
     let contImg = document.getElementById('img-modulo-agendamento');
+    let imgFormulario = document.getElementById('container-img-form');
     
     if(moduloProcedimentos.style.display === 'flex'){
         moduloProcedimentos.style.display = 'none';
         
+        imgFormulario.style.display = 'flex';
         formInicial.style.display = 'flex';
         formFinal.style.display = 'none';
         contImg.style.borderRadius = '0%';
+        novoParagrafo.style.display = 'none';
     }
 }
 
@@ -108,13 +111,13 @@ function continuarAgendamento(){
     let imgForm = document.getElementById('img-modulo-agendamento');
     
     formInicial.style.display = 'none';
-    
     imgForm.style.transition = 'left 0.5s ease-out, transform 0.5s ease-out';
     formFinal.style.display = 'flex'  
     imgForm.style.borderRadius = '0 40px 0 40px';
 }
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
 
+const novoParagrafo = document.createElement('p');
 function confirmarAgendamento(){
     let formulario1 = document.getElementById('form-modulo1');
     let formulario2 = document.getElementById('form-modulo2');
@@ -155,7 +158,6 @@ function confirmarAgendamento(){
     formulario2.style.display = 'none';
     imgFormulario.style.display = 'none';
     
-    const novoParagrafo = document.createElement('p');
     novoParagrafo.innerText = mensagem;
     document.getElementById('conteudo-modulo-procedimentos').appendChild(novoParagrafo);
     novoParagrafo.style.fontFamily = 'Verdana';
