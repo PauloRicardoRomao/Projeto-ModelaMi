@@ -170,4 +170,4 @@ function confirmarAgendamento(){
     novoParagrafo.style.justifyContent = 'center';
     novoParagrafo.style.alignItems = 'center';
 }
-document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento())
+document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento());
