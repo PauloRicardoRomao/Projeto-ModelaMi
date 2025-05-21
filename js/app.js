@@ -72,6 +72,9 @@ function chamaModalProcedimentos(){
     
     const larguraJanela = window.innerWidth;
 
+    console.log(larguraJanela);
+    console.log(moduloProcedimentos.style.display);
+
     if(larguraJanela <= 600){
         if(moduloProcedimentos.style.display === 'flex'){
             moduloProcedimentos.style.display = 'none';

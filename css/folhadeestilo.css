@@ -648,7 +648,7 @@ footer .texto-direitos{
 }
 
 .conteudo-modulo-procedimentos .form-modulo input,
-.conteudo-modulo-procedimentos .form-modulo section{
+.conteudo-modulo-procedimentos .form-modulo select{
     display: flex;
     flex-direction: row;
     width: 65%;
