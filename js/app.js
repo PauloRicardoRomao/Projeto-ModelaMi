@@ -68,6 +68,17 @@ function abreWpp(){
 /*Agendamentos*/
 
 function chamaModalProcedimentos(){
+    let imgFormulario = document.getElementById('container-img-form');
+    
+    const larguraJanela = window.innerWidth;
+
+    if(larguraJanela <= 600){
+        if(moduloProcedimentos.style.display === 'flex'){
+            moduloProcedimentos.style.display = 'none';
+            imgFormulario.style.display = 'none';
+        }
+    }
+
     moduloProcedimentos.style.display = 'flex';
 }
 

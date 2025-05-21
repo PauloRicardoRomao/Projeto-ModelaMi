@@ -647,12 +647,8 @@ footer .texto-direitos{
     height: auto;
 }
 
-.conteudo-modulo-procedimentos .form-modulo #txt-nome,
-.conteudo-modulo-procedimentos .form-modulo #txt-sobrenome,
-.conteudo-modulo-procedimentos .form-modulo #txt-email,
-.conteudo-modulo-procedimentos .form-modulo #txt-cel,
-.conteudo-modulo-procedimentos .form-modulo #txt-data-hora,
-.conteudo-modulo-procedimentos .form-modulo #combo-local{
+.conteudo-modulo-procedimentos .form-modulo input,
+.conteudo-modulo-procedimentos .form-modulo section{
     display: flex;
     flex-direction: row;
     width: 65%;
@@ -1074,16 +1070,24 @@ footer .texto-direitos{
     .conteudo-modulo-procedimentos .form-modulo label{
         width: 100%;
         height: auto;
-        margin-top: 15%;
-        margin-bottom: 5%;
+        margin-top: 10%;
+        margin-bottom: 2%;
     }
 
-    .conteudo-modulo-procedimentos .form-modulo #txt-form,
-    .conteudo-modulo-procedimentos .form-modulo #txt-data-hora,
-    .conteudo-modulo-procedimentos .form-modulo #combo-local{
+    .conteudo-modulo-procedimentos .form-modulo input,
+    .conteudo-modulo-procedimentos .form-modulo select{
         width: 100%;
-        font-size: 1.0em;
+        font-size: 1.2em;
+        height: 1.6em;
+        line-height: 1.2em;
         border-radius: 12px;
+    }
+
+    .conteudo-modulo-procedimentos .form-modulo select option{
+        width: 100%;
+        font-size: 1.2em;
+        height: 1.4em;
+        line-height: 1.2em;  
     }
 
 
@@ -1245,11 +1249,12 @@ footer .texto-direitos{
         margin-bottom: 3%;
     }
 
-    .conteudo-modulo-procedimentos .form-modulo #txt-form,
-    .conteudo-modulo-procedimentos .form-modulo #txt-data-hora,
-    .conteudo-modulo-procedimentos .form-modulo #combo-local{
+    .conteudo-modulo-procedimentos .form-modulo input,
+    .conteudo-modulo-procedimentos .form-modulo section{
         width: 100%;
         font-size: 1.2em;
+        height: 1.6em;
+        line-height: 1.4em;
         border-radius: 12px;
     }
 
