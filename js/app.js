@@ -69,16 +69,15 @@ function abreWpp(){
 
 function chamaModalProcedimentos(){
     let imgFormulario = document.getElementById('container-img-form');
+    let contImg = document.getElementById('img-modulo-agendamento');
     
     const larguraJanela = window.innerWidth;
-
-    console.log(larguraJanela);
-    console.log(moduloProcedimentos.style.display);
 
     if(larguraJanela <= 600){
         if(moduloProcedimentos.style.display === 'flex'){
             moduloProcedimentos.style.display = 'none';
             imgFormulario.style.display = 'none';
+            contImg.style.display = 'none';
         }
     }
 
@@ -96,6 +95,7 @@ function alteraProcedimentoAgendamento(tituloBox, imgBox){
         tituloAgendamento.innerText = tituloProcedimento.innerText;
         let srcProcedimento = imgProcedimento.getAttribute('src');
         imgAgendamento.setAttribute('src', srcProcedimento);
+        
         chamaModalProcedimentos();
     }else{
         console.warn("Elemento 'tituloBox' ou 'imgBox' não encontrado.");
@@ -107,16 +107,28 @@ function fechaModuloAgendamento(){
     let formFinal = document.getElementById('form-modulo2');
     let contImg = document.getElementById('img-modulo-agendamento');
     let imgFormulario = document.getElementById('container-img-form');
-    
-    if(moduloProcedimentos.style.display === 'flex'){
-        moduloProcedimentos.style.display = 'none';
-        
-        imgFormulario.style.display = 'flex';
-        formInicial.style.display = 'flex';
-        formFinal.style.display = 'none';
-        contImg.style.borderRadius = '0%';
-        novoParagrafo.style.display = 'none';
+   
+    const janela = window.innerWidth;
+
+    if(janela > 600){ 
+        if(moduloProcedimentos.style.display === 'flex'){
+            moduloProcedimentos.style.display = 'none';
+            
+            imgFormulario.style.display = 'flex';
+            formInicial.style.display = 'flex';
+            formFinal.style.display = 'none';
+            contImg.style.borderRadius = '0%';
+            novoParagrafo.style.display = 'none';
+        }
+    }else if(janela <= 600){
+         if(moduloProcedimentos.style.display === 'flex'){
+            moduloProcedimentos.style.display = 'none';
+            
+            formInicial.style.display = 'flex';
+            formFinal.style.display = 'none';
+        }
     }
+
 }
 
 function continuarAgendamento(){
