@@ -30,8 +30,7 @@
     <main>
         <div class="container">
             <section class="box" id="box-formulario">
-                <form class="form-contato" id="form-contato" action="https://webhook.site/f07ed1e1-91a7-406c-a887-2f6ebf8fae8d" 
-                method="POST">
+                <form class="form-contato" id="form-contato"  method="POST">
                     <label for="nome">Nome</label>
                     <input type="text" placeholder="Fulano" name="nome" required="required">
                     <label for="email">Email</label>
@@ -40,7 +39,7 @@
                     <input type="tel" placeholder="14 99999-9999" name="cel" required="required">
                     <label for="mensagem">Mensagem</label>
                     <textarea placeholder="Sua mensagem aqui" name="mensagem" id="mensagem" required="required"></textarea>
-                    <button type="submit">Enviar</button>
+                    <button type="button" id="enviar-mensagem">Enviar</button>
                 </form>
             </section>
             <section class="box" id="box-contatos">
