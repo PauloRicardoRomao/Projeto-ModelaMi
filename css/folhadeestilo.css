@@ -1,3 +1,9 @@
+:root{
+    --montserrat: "Montserrat", sans-serif;
+    --cormorant-normal: "Cormorant Garamond", serif;
+    --playfair: "Playfair Display", serif; 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -36,7 +42,10 @@ header{
     width: 70%;
     height: 100%;
     list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 0.8em;
     align-items: center;
     justify-content: space-around;
@@ -92,7 +101,10 @@ header{
     height: 100%;
     align-items: center;
     justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5em;
     color: #fff;
     text-align: center;
@@ -227,7 +239,9 @@ main{
     width: 100%;
     align-items: center;
     justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: 700;
     font-size: 1.4em;
     color: rgb(243, 191, 61);
@@ -243,8 +257,10 @@ main{
     align-items: center;
     justify-content: center;
     text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.0em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: #fff;
     line-height: 1.4em;
     text-indent: 2em;
@@ -277,8 +293,10 @@ footer {
 }
 
 footer .texto-direitos{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.0em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: rgb(235, 201, 53);
     text-align: center;
 }
@@ -293,13 +311,18 @@ footer .texto-direitos{
     width: 35vw;
     height: auto;  
     justify-content: space-around;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.0em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: #fff;
 }
 
 .form-contato input{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.0em;
     height: 1.8em;
     margin-bottom: 15px;
@@ -310,8 +333,11 @@ footer .texto-direitos{
 }
 
 .form-contato textarea{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.0em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-style: normal;
     padding-left: 10px;
     padding-right: 5px;
     height: 8rem;
@@ -332,7 +358,10 @@ footer .texto-direitos{
     background-color: rgb(235, 201, 53);
     border: none;
     border-radius: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     font-size: 1.2em;
     color: #000;
     animation: pulsar-botao 2s infinite;
@@ -361,7 +390,10 @@ footer .texto-direitos{
 }
 
 .mural-contatos h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     font-size: 1.4em;
     color: #000000;
 }
@@ -439,7 +471,7 @@ footer .texto-direitos{
     box-shadow: 0 0 15px 5px #fff;
 }
 
-.container-sobre .conteudos-sobre {
+.container-sobre .conteudos-sobre{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -476,7 +508,11 @@ footer .texto-direitos{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4em;
 }
 
 .container-sobre .container-titulo-sobre .titulo-conteudo-sobre{
@@ -499,8 +535,11 @@ footer .texto-direitos{
     padding: 20px;
     align-items: center;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
     line-height: 1.6em;
     color: #fff;
     text-indent: 2em;
@@ -564,8 +603,11 @@ footer .texto-direitos{
     height: 5%;
     justify-content: center;
     align-items: flex-start;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.3em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2em;
     color: #fff;
     text-align: justify;
     line-height: 1.4em;
@@ -579,7 +621,10 @@ footer .texto-direitos{
     height: 50%;
     justify-content: center;
     align-items: flex-start;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: #fff;
     font-size: 1.0em;
     text-align: justify;
@@ -612,9 +657,11 @@ footer .texto-direitos{
     height: 10%;
     align-items: center;
     justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
     font-weight: 700;
-    font-size: 1.6em;
+    font-style: normal;
+    font-size: 1.4em;
     color: rgb(243, 191, 61);
     background: #242424;
     text-shadow: 2px 1px 10px #000,
@@ -634,8 +681,11 @@ footer .texto-direitos{
     padding: 20px 20px;
     align-items: center;
     justify-content: start;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.4em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
     color: #fff;
     overflow: hidden;
 }
@@ -655,10 +705,18 @@ footer .texto-direitos{
     height: auto;
     align-items: center;
     justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 0.8em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
     border-radius: 10px;
     padding-left: 5px;
+    border: none;
+}
+
+.conteudo-modulo-procedimentos .form-modulo input{
+    line-height: 1.4em;
 }
 
 .form-modulo button{
@@ -675,8 +733,11 @@ footer .texto-direitos{
     background-color: rgb(235, 201, 53);
     border: none;
     border-radius: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.7em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.0em;
     color: #000;
 }
 
@@ -731,8 +792,11 @@ footer .texto-direitos{
     position: absolute;
     top: 50%;
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.8em;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6em;
     text-shadow: 2px 1px 10px #000,
             1px 2px 10px #000,
             1px -2px 10px #000,
@@ -925,8 +989,11 @@ footer .texto-direitos{
 
     .mural-contatos h1{
         margin-top: 5%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.8em;
+        font-family: var(--montserrat);
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.6em;
         color: #000000;
     }    
 
@@ -1000,7 +1067,7 @@ footer .texto-direitos{
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: var(--montserrat);
     }
     
     .container-sobre .container-titulo-sobre .titulo-conteudo-sobre{
@@ -1023,8 +1090,11 @@ footer .texto-direitos{
         padding: 20px;
         align-items: center;
         justify-content: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.2em;
+        font-family: var(--montserrat);
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.0em;
         color: #fff;
         text-indent: 2em;
         text-align: justify;
@@ -1173,8 +1243,11 @@ footer .texto-direitos{
         width: 100%;
         height: 100vh;  
         justify-content: space-around;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.2em;
+        font-family: var(--montserrat);
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.0em;
         color: #fff;
     }
     
@@ -1286,6 +1359,5 @@ footer .texto-direitos{
         height: auto;
         object-fit: cover;
     }
-
 
 }

@@ -135,11 +135,19 @@ function continuarAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
     let formFinal = document.getElementById('form-modulo2');
     let imgForm = document.getElementById('img-modulo-agendamento');
-    
-    formInicial.style.display = 'none';
-    imgForm.style.transition = 'left 0.5s ease-out, transform 0.5s ease-out';
-    formFinal.style.display = 'flex'  
-    imgForm.style.borderRadius = '0 40px 0 40px';
+    let txtNome = document.getElementById('txt-nome').value;
+    let txtSobrenome = document.getElementById('txt-sobrenome').value;
+    let txtEmail = document.getElementById('txt-email').value;
+    let txtCel = document.getElementById('txt-cel').value;    
+
+    if(!txtNome || !txtSobrenome || !txtEmail || !txtCel){
+        alert('Necessário preencher todos os campos');
+    } else{
+        formInicial.style.display = 'none';
+        imgForm.style.transition = 'left 0.5s ease-out, transform 0.5s ease-out';
+        formFinal.style.display = 'flex'  
+        imgForm.style.borderRadius = '0 40px 0 40px';
+    }
 }
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
 
@@ -156,49 +164,53 @@ function confirmarAgendamento(){
     let dataHoraFormulario = document.getElementById('txt-data-hora').value;
     let localFormulario = document.getElementById('combo-local').value;
     
-    const dados = {
-        nome: nomeFormulario,
-        sobrenome: sobrenomeFormulario,
-        email: emailFormulario,
-        telefone: telefoneFormulario,
-        datahora: dataHoraFormulario,
-        local: localFormulario
-    };
-    const dadosTratados = JSON.stringify(dados);
-
-    let dataHoraFormatada = new Date(dataHoraFormulario);
-
-    const dataFormatada = dataHoraFormatada.toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-    const horaFormatada = dataHoraFormatada.toLocaleTimeString('pt-BR', {
-        hour: '2-digit',
-        minute: '2-digit'
-    });
-
-    const mensagem = `Consulta agendada ${nomeFormulario} ${sobrenomeFormulario}, para o dia: ${dataFormatada}, ás ${horaFormatada}!`;
-
-    formulario1.style.display = 'none';
-    formulario2.style.display = 'none';
-    imgFormulario.style.display = 'none';
+    if (!dataHoraFormulario || !localFormulario){
+        alert('Necessário preencher todos os campos!');
+    } else {
+        const dados = {
+            nome: nomeFormulario,
+            sobrenome: sobrenomeFormulario,
+            email: emailFormulario,
+            telefone: telefoneFormulario,
+            datahora: dataHoraFormulario,
+            local: localFormulario
+        };
+        const dadosTratados = JSON.stringify(dados);
     
-    novoParagrafo.innerText = mensagem;
-    document.getElementById('conteudo-modulo-procedimentos').appendChild(novoParagrafo);
-    novoParagrafo.style.fontFamily = 'Verdana';
-    novoParagrafo.style.fontSize = '1.4em';
-    novoParagrafo.style.color = '#fff'; 
-    novoParagrafo.style.textAlign = 'Justify';
-    novoParagrafo.style.width = '100%';
-    novoParagrafo.style.width = '70%';
-    novoParagrafo.style.marginTop = '5%';
-    novoParagrafo.style.justifyContent = 'center';
-    novoParagrafo.style.alignItems = 'center';
-    nomeFormulario.value = "";
-    sobrenomeFormulario.value = "";
-    emailFormulario.value = ""; 
-    telefoneFormulario.value = "";
-    dataHoraFormulario.value = "";
+        let dataHoraFormatada = new Date(dataHoraFormulario);
+
+        const dataFormatada = dataHoraFormatada.toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+        const horaFormatada = dataHoraFormatada.toLocaleTimeString('pt-BR', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        const mensagem = `Consulta agendada ${nomeFormulario} ${sobrenomeFormulario}, para o dia: ${dataFormatada}, ás ${horaFormatada}!`;
+
+        formulario1.style.display = 'none';
+        formulario2.style.display = 'none';
+        imgFormulario.style.display = 'none';
+        
+        novoParagrafo.innerText = mensagem;
+        document.getElementById('conteudo-modulo-procedimentos').appendChild(novoParagrafo);
+        novoParagrafo.style.fontFamily = 'Verdana';
+        novoParagrafo.style.fontSize = '1.4em';
+        novoParagrafo.style.color = '#fff'; 
+        novoParagrafo.style.textAlign = 'Justify';
+        novoParagrafo.style.width = '100%';
+        novoParagrafo.style.width = '70%';
+        novoParagrafo.style.marginTop = '5%';
+        novoParagrafo.style.justifyContent = 'center';
+        novoParagrafo.style.alignItems = 'center';
+        nomeFormulario.value = "";
+        sobrenomeFormulario.value = "";
+        emailFormulario.value = ""; 
+        telefoneFormulario.value = "";
+        dataHoraFormulario.value = "";
+    }
 }
 document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento());
