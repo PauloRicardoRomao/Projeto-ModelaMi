@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelaMi</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/folhadeestilo.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/Modela-Mi-logo-cópia-transparente.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;
+    1,300..700&Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,
+    400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../assets/images/logo-mobile.png" alt="logo" class="logo-menu-mobile">
+        <nav class="container-menu">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="procedimentos.html">PROCEDIMENTOS</a></li>
+                <li><a href="https://www.afinese.com.br/" target="_blank">AFINE-SE</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </nav>
+        <span class="menu-mobile">&#9776;</span>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="box" id="box-formulario">
+                <form class="form-contato" id="form-contato" action="https://webhook.site/f07ed1e1-91a7-406c-a887-2f6ebf8fae8d" method="POST">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Fulano" name="nome" required="required">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="exemplo@gmail.com" name="email" required="required">
+                    <label for="cel">Celular</label>
+                    <input type="tel" placeholder="14 99999-9999" name="cel" required="required">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea placeholder="Sua mensagem aqui" name="mensagem" id="mensagem" required="required"></textarea>
+                    <button type="submit" id="enviar-mensagem" id="enviar-mensagem">Enviar</button>
+                </form>
+            </section>
+            <section class="box" id="box-contatos">
+                <div class="mural-contatos">
+                    <h1>Contatos</h1>
+                    <img src="../assets/images/instagram.png"
+                        srcset="../assets/images/instagram.png 480w, ../assets/images/instagram.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="Instagram" id="btn-instagram" onclick="abreInstagram()"
+                    >
+                    <img src="../assets/images/facebook.png"
+                        srcset="../assets/images/facebook.png 480w, ../assets/images/facebook.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="Facebook" id="btn-facebook"
+                    >
+                    <img src="../assets/images/whatsapp.png"
+                        srcset="../assets/images/whatsapp.png 480w, ../assets/images/whatsapp.png 3375w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px,3375px"
+                        alt="WhatsApp" id="btn-wpp" onclick="abreWpp()"
+                    >
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="texto-direitos">© 2025 - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
