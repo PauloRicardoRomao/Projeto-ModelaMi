@@ -216,13 +216,11 @@ function confirmarAgendamento(){
 document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento());
 
 function limparFormContato(){
-    let inputs = document.getElementsByTagName('input').value;
-    let text = document.getElementsByTagName('taxtarea').value;
+    let inputs = document.querySelectorAll('input');
+    let textareas = document.querySelectorAll('textarea');
 
-    window.open('https://webhook.site/f07ed1e1-91a7-406c-a887-2f6ebf8fae8d');
-
-    inputs = "";
-    text = "";
+    inputs.forEach(input => input.value = "");
+    textareas.forEach(textarea => textarea.value = "");
 }
 document.getElementById('enviar-mensagem').addEventListener("click", (event) => limparFormContato());
 
