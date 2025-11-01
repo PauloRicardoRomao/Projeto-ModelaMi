@@ -15,6 +15,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: #242424;
+    scroll-behavior: smooth;
 }
 
 /* header */
@@ -427,7 +428,7 @@ footer .texto-direitos{
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.04);
     }
     100% {
         transform: scale(1);
@@ -560,7 +561,50 @@ footer .texto-direitos{
     color: #000;
 }
 
+
 /* PROCEDIMENTOS */
+
+.main-procedimentos{
+    flex-direction: column;
+}
+
+.sub-menu-agendamentos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 20vh;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.sub-menu-agendamentos button{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    width: 20%;
+    min-height: 8vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 201, 53);
+    border: none;
+    border-radius: 15px;
+    font-family: var(--montserrat);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.0em;
+    color: #000;
+}
+
+.sub-menu-agendamentos button:hover, .sub-menu-agendamentos button:active{
+    cursor: pointer;
+    background-color: rgb(177, 152, 40);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.651);
+    color: #fff;
+    animation: pulsar-botao 2s infinite;
+}
 
 .container-grid{
     display: grid;
@@ -569,7 +613,7 @@ footer .texto-direitos{
     gap: 20px;
     padding: 20px;
     min-height: max-content;
-    width: 100vw;
+    width: 100%;
 }
 
 .container-grid .box{
@@ -646,7 +690,7 @@ footer .texto-direitos{
 
 /* modal's procedimentos */
 
-.conteudo-modulo-procedimentos{    
+.conteudo-modulo-procedimentos, .conteudo-modulo-aut-age{    
     display: flex;
     flex-direction: row;
     position: relative;
@@ -659,7 +703,7 @@ footer .texto-direitos{
     box-shadow: 0px 0px 10px 5px #000000;
 }
 
-.conteudo-modulo-procedimentos .titulo-modulo{
+.conteudo-modulo-procedimentos .titulo-modulo, .conteudo-modulo-aut-age .titulo-modulo{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -683,7 +727,7 @@ footer .texto-direitos{
     z-index: 998;
 }
 
-.conteudo-modulo-procedimentos .form-modulo{
+.conteudo-modulo-procedimentos .form-modulo, .conteudo-modulo-aut-age form{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -702,15 +746,21 @@ footer .texto-direitos{
     overflow: hidden;
 }
 
-.conteudo-modulo-procedimentos .form-modulo label{
+.conteudo-modulo-aut-age form{
+    width: 60%;
+}
+
+.conteudo-modulo-procedimentos .form-modulo label, .conteudo-modulo-aut-age form label{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 30%;
     height: auto;
 }
 
 .conteudo-modulo-procedimentos .form-modulo input,
-.conteudo-modulo-procedimentos .form-modulo select{
+.conteudo-modulo-procedimentos .form-modulo select, 
+.conteudo-modulo-aut-age form input{
     display: flex;
     flex-direction: row;
     width: 65%;
@@ -722,16 +772,23 @@ footer .texto-direitos{
     font-weight: 400;
     font-style: normal;
     font-size: 1.0em;
-    border-radius: 10px;
+    border-radius: 8px;
     padding-left: 5px;
     border: none;
 }
 
 .conteudo-modulo-procedimentos .form-modulo input{
     line-height: 1.4em;
+    height: 1.6em;
 }
 
-.form-modulo button{
+.conteudo-modulo-aut-age form input{
+    margin-top: 1%;
+    line-height: 1.4em;
+    height: 1.8em;
+}
+
+.form-modulo button, .conteudo-modulo-aut-age form button{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -751,10 +808,12 @@ footer .texto-direitos{
     font-style: normal;
     font-size: 1.0em;
     color: #000;
+    cursor: pointer;
 }
 
-.form-modulo button:hover, .form-contato button:active{
-    cursor: pointer;
+.form-modulo button:hover, .form-contato button:active,
+.conteudo-modulo-aut-age form button:hover, 
+.conteudo-modulo-aut-age form button:active{
     background-color: rgb(177, 152, 40);
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
     color: #fff;

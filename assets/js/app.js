@@ -3,7 +3,8 @@ const containerMenu = document.querySelector(".container-menu");
 const body = document.querySelector("body");
 const botaoForm = document.getElementById("enviar-mensagem");
 const moduloProcedimentos = document.getElementById('agendamento-modulo-1');
-
+let modulo =  null;
+let procedimentoSelecionado = null;
 
 if (botaoMenu && containerMenu) {
     botaoMenu.addEventListener("click", (event) => {
@@ -25,37 +26,30 @@ if (botaoMenu && containerMenu) {
     });
 }
 
-const modulo1 = document.getElementById('modulo1');
-function chamaModal1(){
-    modulo1.style.display = 'flex';
+function abreFechaModal(moduloSelecionado){
+    modulo = document.getElementById(moduloSelecionado);
+    console.log(moduloSelecionado);
+    const visibilidadeModulo = window.getComputedStyle(modulo).display;
+    if (visibilidadeModulo === 'none'){
+        modulo.style.display = 'flex';
+    } else {
+        modulo.style.display = 'none';
+    }
 }
-const boxModulo1 = document.getElementById('box1');
-boxModulo1.addEventListener("click", (event) => chamaModal1());
-
-const modulo2 = document.getElementById('modulo2');
-function chamaModal2(){
-    modulo2.style.display = 'flex';
-}
-const boxModulo2 = document.getElementById('box2');
-boxModulo2.addEventListener("click", (event) => chamaModal2());
-
-const modulo3 = document.getElementById('modulo3');
-function chamaModal3(){
-    modulo3.style.display = 'flex';
-}
-const boxModulo3 = document.getElementById('box3');
-boxModulo3.addEventListener("click", (event) => chamaModal3());
-
-
-function fechaModulo(){
-    if (modulo1.style.display === 'flex' || modulo2.style.display === 'flex' || 
-    modulo3.style.display === 'flex' || moduloProcedimentos.style.display === 'flex'){
-        modulo1.style.display = 'none';
-        modulo2.style.display = 'none';
-        modulo3.style.display = 'none';
-        moduloProcedimentos.style.display = 'none';
-    } 
-}
+// Array com os números dos módulos
+const modulos = [1, 2, 3];
+// Itera sobre o array e configure o Event Listener para cada um
+modulos.forEach(numero => {
+    // Constrói o ID dinamicamente (ex: 'box1', 'box2', etc.)
+    const boxId = `box${numero}`; 
+    const boxModulo = document.getElementById(boxId);
+    const moduloId = `modulo${numero}`;
+    const btnCloseId = `closeModalIndex${numero}`
+    const btnClose = document.getElementById(btnCloseId);
+    
+    boxModulo.addEventListener("click", () => abreFechaModal(moduloId));
+    btnClose.addEventListener("click", () => abreFechaModal(moduloId));   
+});
 
 function abreInstagram(){
     window.open('https://www.instagram.com/modela_mi_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank');
@@ -84,7 +78,13 @@ function chamaModalProcedimentos(){
     moduloProcedimentos.style.display = 'flex';
 }
 
-function alteraProcedimentoAgendamento(tituloBox, imgBox){
+
+function pegaProcedimento(idProcedimento){
+    const procedimentoConsulta = idProcedimento;
+    procedimentoSelecionado = procedimentoConsulta;
+    console.log(procedimentoSelecionado);
+}
+function alteraProcedimentoAgendamento(tituloBox, imgBox, procedimento){
     let tituloProcedimento = document.getElementById(tituloBox);
     let imgProcedimento = document.getElementById(imgBox);
 
@@ -96,6 +96,7 @@ function alteraProcedimentoAgendamento(tituloBox, imgBox){
         let srcProcedimento = imgProcedimento.getAttribute('src');
         imgAgendamento.setAttribute('src', srcProcedimento);
         
+        pegaProcedimento(procedimento);
         chamaModalProcedimentos();
     }else{
         console.warn("Elemento 'tituloBox' ou 'imgBox' não encontrado.");
@@ -128,8 +129,8 @@ function fechaModuloAgendamento(){
             formFinal.style.display = 'none';
         }
     }
-
 }
+
 
 function continuarAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
@@ -150,9 +151,8 @@ function continuarAgendamento(){
     }
 }
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
-
 const novoParagrafo = document.createElement('p');
-function confirmarAgendamento(){
+async function confirmarAgendamento(procedimento){
     let formulario1 = document.getElementById('form-modulo1');
     let formulario2 = document.getElementById('form-modulo2');
     let imgFormulario = document.getElementById('container-img-form');
@@ -168,8 +168,7 @@ function confirmarAgendamento(){
         alert('Necessário preencher todos os campos!');
     } else {
         const dados = {
-            nome: nomeFormulario,
-            sobrenome: sobrenomeFormulario,
+            nome: nomeFormulario+" "+sobrenomeFormulario,
             email: emailFormulario,
             telefone: telefoneFormulario,
             datahora: dataHoraFormulario,
@@ -187,6 +186,26 @@ function confirmarAgendamento(){
         const horaFormatada = dataHoraFormatada.toLocaleTimeString('pt-BR', {
             hour: '2-digit',
             minute: '2-digit'
+        });
+
+        await fetch("http://localhost:3000/api", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                entity: "consulta",
+                action: "gravar",
+                data: {
+                    procedimento: procedimentoSelecionado, 
+                    nome: nomeFormulario + " " + sobrenomeFormulario,
+                    email: emailFormulario,
+                    telefone: telefoneFormulario,
+                    dataHora: dataHoraFormulario,
+                    local: localFormulario,
+                    obsAgendamento: "Sem observações"
+                }
+            })
         });
 
         const mensagem = `Consulta agendada ${nomeFormulario} ${sobrenomeFormulario}, para o dia: ${dataFormatada}, ás ${horaFormatada}!`;
@@ -211,6 +230,7 @@ function confirmarAgendamento(){
         emailFormulario.value = ""; 
         telefoneFormulario.value = "";
         dataHoraFormulario.value = "";
+        procedimentoSelecionado = "";
     }
 }
 document.getElementById('confirmar-agendamento').addEventListener("click", (event) => confirmarAgendamento());

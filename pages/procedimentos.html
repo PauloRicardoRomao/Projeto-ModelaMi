@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,11 @@
         <span class="menu-mobile">&#9776;</span>
     </header>
     
-    <main>
+    <main class="main-procedimentos">
+        <section class="sub-menu-agendamentos">
+            <button type='button' id="btn-verificacao-age" onclick="abreFechaModal('modulo-aut-agendamentos')">Verificar Agendamento</button>
+        </section>
+        
         <div class="container-grid" id="grid-procedimentos">
             <section class="box" id="box-procedimento1" 
             onclick="alteraProcedimentoAgendamento('titulo-procedimento1', 'img-procedimento1')">
@@ -45,7 +49,7 @@
                 </div>
             </section>
             <section class="box" id="box-procedimento2" 
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento2', 'img-procedimento2')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento2', 'img-procedimento2', '1')">
                 <div class="banner" id="box1">
                     <img src="../assets/images/img downl/Criolipolise.jpeg"
                         srcset="../assets/images/img downl/Criolipolise.jpeg 480w"
@@ -65,7 +69,7 @@
                 </div>
             </section>
             <section class="box" id="box-procedimento3"
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento3', 'img-procedimento3')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento3', 'img-procedimento3', '2')">
                 <div class="banner" id="box2">
                     <img src="../assets/images/img downl/Preenchimento facial.jpeg"
                         srcset="../assets/images/img downl/Preenchimento facial.jpeg 480w"
@@ -86,7 +90,7 @@
                 </div>
             </section>
             <section class="box" id="box-procedimento4"
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento4', 'img-procedimento4')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento4', 'img-procedimento4', '3')">
                 <div class="banner" id="box3">
                     <img src="../assets/images/img downl/Limpeza de pele.jpeg"
                         srcset="../assets/images/img downl/Limpeza de pele.jpeg 480w"
@@ -107,7 +111,7 @@
             </section>
 
             <section class="box" id="box-procedimento5"
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento5', 'img-procedimento5')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento5', 'img-procedimento5', '4')">
                 <div class="banner" id="box1">
                     <img src="../assets/images/img downl/Peeling quimico.jpeg"
                         srcset="../assets/images/img downl/Peeling quimico.jpeg 480w"
@@ -124,7 +128,7 @@
                 </div>
             </section>
             <section class="box" id="box-procedimento6"
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento6', 'img-procedimento6')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento6', 'img-procedimento6', '5')">
                 <div class="banner" id="box3">
                     <img src="../assets/images/img downl/Hidrolipo.jpeg"
                         srcset="../assets/images/img downl/Hidrolipo.jpeg 480w"
@@ -146,7 +150,7 @@
                 </div>
             </section>
             <section class="box" id="box-procedimento7"
-            onclick="alteraProcedimentoAgendamento('titulo-procedimento7', 'img-procedimento7')">
+            onclick="alteraProcedimentoAgendamento('titulo-procedimento7', 'img-procedimento7', '6')">
                 <div class="banner" id="box3">
                     <img src="../assets/images/img downl/Manta termica.jpg"
                         srcset="../assets/images/img downl/Manta termica.jpg 480w"
@@ -168,6 +172,20 @@
             </section>
         </div>
     </main>
+
+    <modal class="container-modulo-principal" id="modulo-aut-agendamentos">
+        <div class="conteudo-modulo-aut-age">
+            <button type="button" class="close" onclick="abreFechaModal('modulo-aut-agendamentos')">⨉</button>
+            <h1 class="titulo-modulo">Autenticação</h1>    
+            <form action="POST">
+                <label for="txt-telefone-aut-age">Telefone:</label>
+                <input type="tel" name="txt-telefone-aut-age" id="txt-cel" required="required">
+                <label for="txt-codigo-aut-age">Código de Agendamento:</label>
+                <input type="password" name="txt-codigo-aut-age" id="txt-cod" required="required">
+                <button id="btn-confirmar-aut-age">Realizar Verificação</button>
+            </form>
+        </div>
+    </modal>
 
     <modal class="container-modulo-principal" id="agendamento-modulo-1">
         <div class="conteudo-modulo-procedimentos" id="conteudo-modulo-procedimentos">
