@@ -27,7 +27,52 @@
         <span class="menu-mobile">&#9776;</span>
     </header>
     
-    <main>
+    <main class="container-principal-agendamento">
+        <section class="container-dados-agendamento">
+            <h2>Confirmação de Agendamento</h2>
+            <div class="container-forms-agendamento">
+                <form>
+                    <div class="linha-form-agendamento">
+                        <label for="input-codigo" id="lbl-codigo-agendamento">Código:</label>
+                        <input type="text" name="input-codigo" id="codigo-agendamento" required>
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-nome">Nome:</label>
+                        <input type="text" name="input-nome" id="input-nome" required>
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-email">Email:</label>
+                        <input type="email" name="input-email" id="input-email">
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-telefone">Telefone:</label>
+                        <input type="tel" name="input-telefone" id="input-telefone" placeholder="()" required>
+                    </div>
+                </form>
+                <form>
+                    <div class="linha-form-agendamento">
+                        <label for="input-procedimento">Procedimento:</label>
+                        <input type="text" name="input-procedimento" id="input-procedimento" required>
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-data-marcada">Data Marcada:</label>
+                        <input type="datetime-local" name="input-data-marcada" id="input-data-marcada" required>
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-local">Local:</label>
+                        <input type="text" name="input-local" id="input-local" required>
+                    </div>
+                    <div class="linha-form-agendamento">
+                        <label for="input-valor">Valor:</label>
+                        <input type="text" name="input-valor" id="input-valor" placeholder="0,00" required>
+                    </div>
+                </form> 
+            </div>
+            <div class="container-btns-agendamento">
+                <button type="button" id="btn-cancelar-agendamento">Cancelar Agendamento</button>
+                <button type="button" id="btn-realizar-pagamento">Realizar Pagamento</button>
+            </div>
+        </section>
     </main>
     
     

@@ -131,7 +131,6 @@ function fechaModuloAgendamento(){
     }
 }
 
-
 function continuarAgendamento(){
     let formInicial = document.getElementById('form-modulo1');
     let formFinal = document.getElementById('form-modulo2');
@@ -152,7 +151,7 @@ function continuarAgendamento(){
 }
 document.getElementById('continuar-agendamento').addEventListener("click", (event) => continuarAgendamento());
 const novoParagrafo = document.createElement('p');
-async function confirmarAgendamento(procedimento){
+async function confirmarAgendamento(){
     let formulario1 = document.getElementById('form-modulo1');
     let formulario2 = document.getElementById('form-modulo2');
     let imgFormulario = document.getElementById('container-img-form');
