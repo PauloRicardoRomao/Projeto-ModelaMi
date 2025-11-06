@@ -30,11 +30,11 @@
     <main class="container-principal-agendamento">
         <section class="container-dados-agendamento">
             <h2>Confirmação de Agendamento</h2>
-            <div class="container-forms-agendamento">
+            <div class="container-forms-agendamento" id="container-forms-agendamento">
                 <form>
                     <div class="linha-form-agendamento">
                         <label for="input-codigo" id="lbl-codigo-agendamento">Código:</label>
-                        <input type="text" name="input-codigo" id="codigo-agendamento" required>
+                        <input type="text" name="input-codigo" id="codigo-agendamento" required disabled>
                     </div>
                     <div class="linha-form-agendamento">
                         <label for="input-nome">Nome:</label>
@@ -52,7 +52,7 @@
                 <form>
                     <div class="linha-form-agendamento">
                         <label for="input-procedimento">Procedimento:</label>
-                        <input type="text" name="input-procedimento" id="input-procedimento" required>
+                        <input type="text" name="input-procedimento" id="input-procedimento" required disabled>
                     </div>
                     <div class="linha-form-agendamento">
                         <label for="input-data-marcada">Data Marcada:</label>
@@ -60,11 +60,11 @@
                     </div>
                     <div class="linha-form-agendamento">
                         <label for="input-local">Local:</label>
-                        <input type="text" name="input-local" id="input-local" required>
+                        <input type="text" name="input-local" id="input-local" required disabled>
                     </div>
                     <div class="linha-form-agendamento">
                         <label for="input-valor">Valor:</label>
-                        <input type="text" name="input-valor" id="input-valor" placeholder="0,00" required>
+                        <input type="text" name="input-valor" id="input-valor" placeholder="0,00" required disabled>
                     </div>
                 </form> 
             </div>
@@ -81,5 +81,6 @@
     </footer>
 
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/script_verificacao_agendamentos.js"></script>
 </body>
 </html>
